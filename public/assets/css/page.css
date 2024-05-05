@@ -1,0 +1,287 @@
+@font-face {
+  font-family: oswald;
+  src: url(../font/Oswald-Regular.ttf);
+}
+
+@font-face {
+  font-family: vollkorn;
+  src: url(../font/Vollkorn-Regular.ttf);
+}
+
+@font-face {
+  font-family: vollkorn;
+  src: url(../font/Vollkorn-Bold.ttf);
+	font-weight: bold;
+}
+
+html {
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-Y: scroll;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 120%;
+  font-family: "vollkorn", "Trebuchet MS", sans-serif;
+  color: #bbbbbb;
+  display: grid;
+  background-color: #222222;
+}
+
+.page {
+  display: grid;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.column {
+  display: grid;
+  width: 45%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.container-1c, .container-2c, .container-3c {
+  display: grid;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  grid-gap: 0.2vw;
+}
+
+.container-1c {
+  grid-template-columns: 1fr;
+}
+
+.container-2c {
+  grid-template-columns: 1fr 3fr;
+}
+
+.box {
+  width: 96%;
+  margin-top: 1vh;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1vh;
+	border-radius: 0px;
+}
+
+.box.text {
+	background-color: #222222;
+  padding: 4vh;
+}
+
+.box.iframe {
+	background-color: #bbbbbb;
+  min-height: 65vh;
+  padding-top: 2%;
+  padding-bottom: 0%;
+}
+
+.box.empty {
+  background-color: #bbbbbb;
+  min-height: 25vh;
+  padding-top: 4%;
+  padding-bottom: 0%;
+}
+
+button {
+  background-color: #bbbbbb;
+  font-family: "oswald", "Trebuchet MS", sans-serif;
+  font-size: 130%;
+  border: none;
+  border-radius: 0px;
+  color: #222222;
+  margin: 2px 2px;
+  padding: 2%;
+	width: 60%;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #222222;
+	color: #bbbbbb;
+}
+
+button:active {
+	background-color: #bbbbbb;
+	color: #222222;
+}
+
+button.small {
+  width: 40%;
+}
+
+button.big {
+  width: 60%;
+}
+
+h1 {
+	font-family: "oswald", "Trebuchet MS", sans-serif;
+  color: #d2d2be;
+  padding: 3vh;
+  text-align: center;
+  text-decoration: none;
+}
+
+h2, h3 {
+	font-family: "oswald", "Trebuchet MS", sans-serif;
+  color: #d2d2be;
+  padding: 0 0 0 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 170%;
+	margin: 2px 2px 2vh 2px;
+}
+
+h3 {
+  font-size: 125%;
+	margin: 4vh 2px 2vh 2px;
+}
+
+@media screen and (max-width: 1600px) {
+  .page {
+    width: 80%;
+  }
+	.column {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .page {
+    width: 90%;
+  }
+  .column {
+    width: 90%;
+  }
+	.box.title {
+		width: 98%;
+	}
+  .container-2c {
+    grid-template-columns: 1fr 1fr;
+  }
+	h1{
+		padding: 2vh;
+	}
+}
+
+@media screen and (max-width: 900px) {
+  .page {
+    width: 90%;
+  }
+  .column {
+    width: 90%;
+  }
+  .container-2c {
+    grid-template-columns: 1fr;
+  }
+	.box.title {
+		width: 96%;
+	}
+	.animatedtitle {
+    font-size: 7vw;
+    letter-spacing: 1vw;
+  }
+	h1{
+		padding: 2vh;
+	}
+}
+
+iframe {
+  width: 96%;
+  height: 96%;
+	display: block;
+  background-color: inherit;
+  border-width: 0;
+	border-radius: 0px;
+  margin: auto;
+}
+
+label {
+  padding: 2%;
+	margin: 0;
+  display: inline-block;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	width: 100%;
+	border-radius: 0px;
+ 	padding: 0.5vh;
+}
+
+img.card {
+  margin-bottom: auto;
+  margin-top: auto;
+	max-width: 80vw;
+	max-height: 90vh;
+	width: auto;
+}
+
+img.bar {
+	padding: 0vh;
+}
+
+img.small {
+  width: 20vh;
+}
+
+p {
+	margin: 0 0 2vh 0;
+}
+
+p.instructions {
+	font-size: 135%;
+}
+
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #ffffff;
+}
+a:visited{
+  color: #ffffff;
+}
+a:hover {
+  color: #22ccff;
+}
+
+.t_center {
+  text-align: center;
+}
+
+.t_left {
+  text-align: left;
+}
+
+.t_right {
+  text-align: right;
+}
+
+.t_mono {
+  font-family: monospace;
+	font-size: 125%;
+}
