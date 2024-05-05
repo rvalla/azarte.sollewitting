@@ -31,7 +31,7 @@ function mousePressed(){
 function drawWall(){
     c = bc;
     for (let i = 0; i < points.length - 1; i++){
-        for (let j = 1; j < points.length; j++){
+        for (let j = i+1; j < points.length; j++){
             stroke(c);
             line(points[i][0], points[i][1], points[j][0], points[j][1]);
             c = updateColor();
@@ -54,9 +54,9 @@ function keyPressed(){
 }
 
 function createColor() {
-	let r = map(second(), 0, 59, 0, 40) + random(30);
-	let g = map(minute(), 0, 59, 0, 40) + random(30);
-	let b = map(hour(), 0, 23, 0, 40) + random(30);
+	let r = map(second(), 0, 59, 0, 90) + random(30);
+	let g = map(minute(), 0, 59, 0, 90) + random(30);
+	let b = map(hour(), 0, 23, 0, 90) + random(30);
 	return color(r,g,b);
 }
 
